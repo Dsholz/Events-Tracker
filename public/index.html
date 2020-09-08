@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Events Tracker App</title>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>To-Do App</title>
-  <link rel="icon" href="images/favicon.png">
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <h1 class="header__title">Events Tracker App</h1>
+        <h2 class="header__subtitle">What Do You Want to Do?</h2>
+      </div>
+    </div>
 
-<body>
-  <div class="header">
+    <div class="actions">
+      <div class="actions__container">
+        <input
+          id="search-text"
+          type="text"
+          class="input"
+          placeholder="Filter Events"
+        />
+        <label class="checkbox">
+          <input type="checkbox" name="hideCompleted" id="hide" />Hide Completed
+        </label>
+      </div>
+    </div>
+
     <div class="container">
-      <h1 class="header__title">To-Do App</h1>
-      <h2 class="header__subtitle">What Do You Want to Do?</h2>
+      <div id="todos"></div>
+      <form id="new-todo">
+        <input
+          id="title"
+          type="text"
+          class="input"
+          name="todoText"
+          placeholder="Event Title"
+        />
+        <button class="button">Add Event</button>
+      </form>
     </div>
-  </div>
 
-  <div class="actions">
-    <div class="actions__container">
-      <input id="search-text" type="text" class="input" placeholder="Filter Todos">
-      <label class="checkbox">
-        <input type="checkbox" name="hideCompleted" id="hide">Hide Completed
-      </label>
-    </div>
-  </div>
-
-  <div class="container">
-    <div id="todos"></div>
-    <form id="new-todo">
-      <input id="title" type="text" class="input" name="todoText" placeholder="Todo Title">
-      <button class="button">Add Todo</button>
-    </form>
-  </div>
-
-  <script src="./scripts/bundles.js"></script>
-</body>
-
+    <script src="./scripts/bundles.js"></script>
+  </body>
 </html>
